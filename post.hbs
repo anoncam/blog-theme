@@ -107,7 +107,7 @@ into the {body} of the default.hbs template --}}
                 <div class="post-content">
                     {{content}}
                 </div>
-                
+              {{> comments}}  
             </section>
 
             {{!-- Email subscribe form at the bottom of the page --}}
@@ -115,11 +115,6 @@ into the {body} of the default.hbs template --}}
                 {{> subscribe-form}}
             {{/if}}
 
-            
-            <section class="post-full-comments">
-                <div id="disqus_thread"></div>
-            </section>
-           
 
         </article>
 
@@ -173,7 +168,7 @@ into the {body} of the default.hbs template --}}
         </div>
     </div>
 </aside>
-{{> comments}}
+
 {{/post}}
 
 {{!-- The #contentFor helper here will send everything inside it up to the matching #block helper found in default.hbs --}}
