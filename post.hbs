@@ -107,9 +107,11 @@ into the {body} of the default.hbs template --}}
                 <div class="post-content">
                     {{content}}
                 </div>
-              {{> comments}}  
+  
             </section>
-
+            <section>
+            {{> comments}} 
+            </section>
             {{!-- Email subscribe form at the bottom of the page --}}
             {{#if @labs.members}}
                 {{> subscribe-form}}
